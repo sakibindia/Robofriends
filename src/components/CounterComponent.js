@@ -8,7 +8,9 @@ class CounterComponent extends Component{
         }
     }
     shouldComponentUpdate(nextProps,nextState){
-        return true;
+        if(this.state.count!==nextState.count){
+            return true;
+        }
     }
 
     updateCount = () => {
